@@ -5,6 +5,7 @@ using Creekdream.Orm;
 using Creekdream.SimpleDemo.Api.Filters;
 using Creekdream.SimpleDemo.Api.Middlewares;
 using Creekdream.SimpleDemo.EntityFrameworkCore;
+using Creekdream.SimpleDemo.Migrations;
 using Creekdream.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -75,7 +76,7 @@ namespace Creekdream.SimpleDemo.Api
         /// </summary>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            //SeedData.Initialize(app.ApplicationServices).Wait();
+            SeedData.Initialize(app.ApplicationServices).Wait();
 
             if (env.IsDevelopment())
             {
