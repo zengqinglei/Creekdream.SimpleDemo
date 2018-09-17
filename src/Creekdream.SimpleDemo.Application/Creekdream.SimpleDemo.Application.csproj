@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Creekdream.SimpleDemo</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Creekdream.Mapping.AutoMapper" Version="0.2.0" />
+    <PackageReference Include="Creekdream.UnitOfWork.Dapper" Version="0.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Creekdream.SimpleDemo.Dapper\Creekdream.SimpleDemo.Dapper.csproj" />
+  </ItemGroup>
+
+</Project>
+
+

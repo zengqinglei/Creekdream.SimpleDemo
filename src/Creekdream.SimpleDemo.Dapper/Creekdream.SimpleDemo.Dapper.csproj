@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Creekdream.SimpleDemo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Dapper\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Creekdream.Orm.Dapper" Version="0.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Creekdream.SimpleDemo.Core\Creekdream.SimpleDemo.Core.csproj" />
+  </ItemGroup>
+
+</Project>
+
+
