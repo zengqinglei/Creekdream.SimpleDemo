@@ -4,11 +4,12 @@ using Creekdream.Mapping;
 using Creekdream.Orm;
 using Creekdream.SimpleDemo.Api.Filters;
 using Creekdream.SimpleDemo.Api.Middlewares;
-using Creekdream.SimpleDemo.Mappers;
+using Creekdream.SimpleDemo.EntityFrameworkCore;
 using Creekdream.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
@@ -40,24 +41,13 @@ namespace Creekdream.SimpleDemo.Api
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            #region dapper
-            services.AddDbConnection(
+            services.AddDbContext<DbContext, SimpleDemoDbContext>(
                 options =>
                 {
-                    options.UseSqlServer(_configuration.GetConnectionString("Default"));
-                    options.MapperAssemblies.Add(typeof(BookMapper).Assembly);
+                    options.UseLazyLoadingProxies().UseSqlServer(
+                        _configuration.GetConnectionString("Default"),
+                        option => option.UseRowNumberForPaging());
                 });
-            #endregion
-
-            #region entityframework
-            //services.AddDbContext<DbContext, Creekdream.SimpleDemoDbContext>(
-            //    options =>
-            //    {
-            //        options.UseLazyLoadingProxies().UseSqlServer(
-            //            _configuration.GetConnectionString("Default"),
-            //            option => option.UseRowNumberForPaging());
-            //    });
-            #endregion
 
             services.AddSwaggerGen(
                 options =>
@@ -72,7 +62,7 @@ namespace Creekdream.SimpleDemo.Api
                 options =>
                 {
                     options.UseAutofac();
-                    options.UseDapper();
+                    options.UseEfCore();
                     options.UseUnitOfWork();
                     options.UseAutoMapper();
                     options.AddSimpleDemoCore();

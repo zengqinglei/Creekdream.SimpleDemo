@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-items", "solution-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Creekdream.SimpleDemo.Core", "src\Creekdream.SimpleDemo.Core\Creekdream.SimpleDemo.Core.csproj", "{B91C81F1-4FB4-435A-8A18-943DF3EDB0EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Creekdream.SimpleDemo.Dapper", "src\Creekdream.SimpleDemo.Dapper\Creekdream.SimpleDemo.Dapper.csproj", "{35A24E4B-78BE-4CA0-96A8-D1AA9CCBD689}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Creekdream.SimpleDemo.EntityFrameworkCore", "src\Creekdream.SimpleDemo.EntityFrameworkCore\Creekdream.SimpleDemo.EntityFrameworkCore.csproj", "{3F5D6505-BFC1-4D4A-9A87-6EE77623C621}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Creekdream.SimpleDemo.Application", "src\Creekdream.SimpleDemo.Application\Creekdream.SimpleDemo.Application.csproj", "{B6610F48-3EF7-4C23-92C2-4E6FDB982893}"
@@ -29,10 +27,6 @@ Global
 		{B91C81F1-4FB4-435A-8A18-943DF3EDB0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B91C81F1-4FB4-435A-8A18-943DF3EDB0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B91C81F1-4FB4-435A-8A18-943DF3EDB0EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35A24E4B-78BE-4CA0-96A8-D1AA9CCBD689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35A24E4B-78BE-4CA0-96A8-D1AA9CCBD689}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35A24E4B-78BE-4CA0-96A8-D1AA9CCBD689}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35A24E4B-78BE-4CA0-96A8-D1AA9CCBD689}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3F5D6505-BFC1-4D4A-9A87-6EE77623C621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3F5D6505-BFC1-4D4A-9A87-6EE77623C621}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F5D6505-BFC1-4D4A-9A87-6EE77623C621}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,7 +45,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B91C81F1-4FB4-435A-8A18-943DF3EDB0EA} = {0925BA49-0AB1-461A-8821-C78D79C96DC8}
-		{35A24E4B-78BE-4CA0-96A8-D1AA9CCBD689} = {0925BA49-0AB1-461A-8821-C78D79C96DC8}
 		{3F5D6505-BFC1-4D4A-9A87-6EE77623C621} = {0925BA49-0AB1-461A-8821-C78D79C96DC8}
 		{B6610F48-3EF7-4C23-92C2-4E6FDB982893} = {0925BA49-0AB1-461A-8821-C78D79C96DC8}
 		{3F3C8607-F832-4AA1-B288-936A4455C705} = {0925BA49-0AB1-461A-8821-C78D79C96DC8}
