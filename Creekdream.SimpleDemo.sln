@@ -8,6 +8,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{705F1E52-499C-4E95-92D5-C6117080352A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-items", "solution-items", "{BD9C9DB7-C0B5-4C35-93F5-6BF5134BD2FB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Creekdream.SimpleDemo.Core", "src\Creekdream.SimpleDemo.Core\Creekdream.SimpleDemo.Core.csproj", "{B91C81F1-4FB4-435A-8A18-943DF3EDB0EA}"
 EndProject
