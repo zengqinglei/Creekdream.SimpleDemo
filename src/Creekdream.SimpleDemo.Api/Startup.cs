@@ -39,25 +39,13 @@ namespace Creekdream.SimpleDemo.Api
                     options.Filters.Add(typeof(CustomExceptionFilter));
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-            #region dapper
+            
             services.AddDbConnection(
                 options =>
                 {
                     options.UseSqlServer(_configuration.GetConnectionString("Default"));
                     options.MapperAssemblies.Add(typeof(BookMapper).Assembly);
                 });
-            #endregion
-
-            #region entityframework
-            //services.AddDbContext<DbContext, Creekdream.SimpleDemoDbContext>(
-            //    options =>
-            //    {
-            //        options.UseLazyLoadingProxies().UseSqlServer(
-            //            _configuration.GetConnectionString("Default"),
-            //            option => option.UseRowNumberForPaging());
-            //    });
-            #endregion
 
             services.AddSwaggerGen(
                 options =>
