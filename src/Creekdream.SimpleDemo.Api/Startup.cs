@@ -65,7 +65,6 @@ namespace Creekdream.SimpleDemo.Api
                     options.UseAutofac();
                     options.UseEfCore();
                     options.UseUnitOfWork();
-                    options.UseAutoMapper();
                     options.AddSimpleDemoCore();
                     options.AddSimpleDemoApplication();
                 });
@@ -76,6 +75,12 @@ namespace Creekdream.SimpleDemo.Api
         /// </summary>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseCreekdream(
+                options =>
+                {
+                    options.UseAutoMapper();
+                });
+
             SeedData.Initialize(app.ApplicationServices).Wait();
 
             if (env.IsDevelopment())
