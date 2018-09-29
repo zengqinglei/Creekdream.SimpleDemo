@@ -1,16 +1,18 @@
-# »ùÓÚ Creekdream.AspNetCore ¿ò¼ÜµÄEntityFrameworkCoreÊ¾ÀıÏîÄ¿
+# åŸºäº Creekdream.AspNetCore æ¡†æ¶çš„EntityFrameworkCoreç¤ºä¾‹é¡¹ç›®
 
-ÏîÄ¿Ö÷Òª»ùÓÚ Creekdream.AspNetCore ¿ò¼Ü¿ª·¢Ò»¸ö¼òµ¥µÄ¶à²ã¼Ü¹¹µÄÊ¾ÀıÏîÄ¿£¬ÊµÏÖÁË»ù±¾µÄÔöÉ¾¸Ä²é·şÎñ¡£
+é¡¹ç›®ä¸»è¦åŸºäº Creekdream.AspNetCore æ¡†æ¶å¼€å‘ä¸€ä¸ªç®€å•çš„å¤šå±‚æ¶æ„çš„ç¤ºä¾‹é¡¹ç›®ï¼Œå®ç°äº†åŸºæœ¬çš„å¢åˆ æ”¹æŸ¥æœåŠ¡ã€‚
 
-## Æô¶¯²½Öè
+**å¦‚éœ€ä½¿ç”¨ Dapperï¼Œè¯·æŸ¥çœ‹ï¼š[dapper](https://github.com/zengqinglei/Creekdream.SimpleDemo/tree/dapper) åˆ†æ”¯**
 
-**»·¾³ÒªÇó**
+## å¯åŠ¨æ­¥éª¤
+
+**ç¯å¢ƒè¦æ±‚**
 * VS2017
 * SQLServer 2008+
 * .NET CORE 2.1+
-### 1. ÅäÖÃ SQLServer Êı¾İÁ¬½Ó
+### 1. é…ç½® SQLServer æ•°æ®è¿æ¥
 
-appsetting.jsonÅäÖÃÈçÏÂ£º
+appsetting.jsoné…ç½®å¦‚ä¸‹ï¼š
 
 ``` csharp
 {
@@ -20,14 +22,14 @@ appsetting.jsonÅäÖÃÈçÏÂ£º
 }
 ```
 
-### 2. Ê¹ÓÃ EFCore Êı¾İÇ¨ÒÆ¹¦ÄÜÍê³ÉÊı¾İ¿â³õÊ¼»¯
+### 2. ä½¿ç”¨ EFCore æ•°æ®è¿ç§»åŠŸèƒ½å®Œæˆæ•°æ®åº“åˆå§‹åŒ–
 ``` csharp
-// ÏîÄ¿ÖĞÓÉÓÚÒÑÌí¼Ó³õÊ¼Êı¾İ¿âÎÄ¼ş£¬Ö´ĞĞÈçÏÂÃüÁî¼´¿É
+// é¡¹ç›®ä¸­ç”±äºå·²æ·»åŠ åˆå§‹æ•°æ®åº“æ–‡ä»¶ï¼Œæ‰§è¡Œå¦‚ä¸‹å‘½ä»¤å³å¯
 Update-Database
 
-// ÈçĞèÖØĞÂÉú³ÉÊı¾İÇ¨ÒÆÎÄ¼ş£¬É¾³ıÏîÄ¿Creekdream.SimpleDemo.EntityFrameworkCore\ÖĞ³öSeedData.csÒÔÍâµÄÎÄ¼ş
+// å¦‚éœ€é‡æ–°ç”Ÿæˆæ•°æ®è¿ç§»æ–‡ä»¶ï¼Œåˆ é™¤é¡¹ç›®Creekdream.SimpleDemo.EntityFrameworkCore\ä¸­å‡ºSeedData.csä»¥å¤–çš„æ–‡ä»¶
 Add-Migration InitializeDatabase
 Update-Database
 ```
 
-### 3. Æô¶¯ÏîÄ¿µã»÷½øÈëÔÚÏßÎÄµµ¼´¿É×Ô²âµÈ²Ù×÷¡£
+### 3. å¯åŠ¨é¡¹ç›®ç‚¹å‡»è¿›å…¥åœ¨çº¿æ–‡æ¡£å³å¯è‡ªæµ‹ç­‰æ“ä½œã€‚
