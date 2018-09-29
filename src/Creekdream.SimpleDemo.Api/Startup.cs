@@ -39,7 +39,7 @@ namespace Creekdream.SimpleDemo.Api
                     options.Filters.Add(typeof(CustomExceptionFilter));
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            
+
             services.AddDbConnection(
                 options =>
                 {
@@ -62,7 +62,6 @@ namespace Creekdream.SimpleDemo.Api
                     options.UseAutofac();
                     options.UseDapper();
                     options.UseUnitOfWork();
-                    options.UseAutoMapper();
                     options.AddSimpleDemoCore();
                     options.AddSimpleDemoApplication();
                 });
@@ -73,7 +72,11 @@ namespace Creekdream.SimpleDemo.Api
         /// </summary>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            //SeedData.Initialize(app.ApplicationServices).Wait();
+            app.UseCreekdream(
+                options =>
+                {
+                    options.UseAutoMapper();
+                });
 
             if (env.IsDevelopment())
             {

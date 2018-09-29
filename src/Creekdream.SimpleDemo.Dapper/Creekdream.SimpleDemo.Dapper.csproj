@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Creekdream.Orm.Dapper" Version="0.2.0" />
+    <PackageReference Include="Creekdream.Orm.Dapper" Version="0.2.1" />
   </ItemGroup>
 
   <ItemGroup>
