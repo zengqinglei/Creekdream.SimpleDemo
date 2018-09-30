@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Creekdream.Orm.EntityFrameworkCore;
 using Creekdream.SimpleDemo.Books;
 using Creekdream.SimpleDemo.EntityFrameworkCore;
 using Creekdream.SimpleDemo.UserManage;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading.Tasks;
 
@@ -18,7 +19,7 @@ namespace Creekdream.SimpleDemo.Migrations
         {
             using (var scope = serviceProvider.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
-                var context = scope.ServiceProvider.GetService<DbContext>() as SimpleDemoDbContext;
+                var context = scope.ServiceProvider.GetService<DbContextBase>() as SimpleDemoDbContext;
                 context.Database.Migrate();
 
                 var user = new User
