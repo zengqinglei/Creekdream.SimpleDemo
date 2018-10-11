@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Creekdream.Mapping.AutoMapper" Version="0.2.2" />
-    <PackageReference Include="Creekdream.UnitOfWork.EntityFrameworkCore" Version="0.2.2" />
+    <PackageReference Include="Creekdream.Mapping.AutoMapper" Version="0.2.3" />
+    <PackageReference Include="Creekdream.UnitOfWork.EntityFrameworkCore" Version="0.2.3" />
   </ItemGroup>
 
   <ItemGroup>
