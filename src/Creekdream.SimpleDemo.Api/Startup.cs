@@ -7,7 +7,6 @@ using Creekdream.SimpleDemo.Api.Filters;
 using Creekdream.SimpleDemo.Api.Middlewares;
 using Creekdream.SimpleDemo.EntityFrameworkCore;
 using Creekdream.SimpleDemo.Migrations;
-using Creekdream.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -41,7 +40,7 @@ namespace Creekdream.SimpleDemo.Api
                 {
                     options.Filters.Add(typeof(CustomExceptionFilter));
                 })
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddDbContext<DbContextBase, SimpleDemoDbContext>(
                 options =>
@@ -65,7 +64,6 @@ namespace Creekdream.SimpleDemo.Api
                 {
                     options.UseAutofac();
                     options.UseEfCore();
-                    options.UseUnitOfWork();
                     options.AddSimpleDemoCore();
                     options.AddSimpleDemoApplication();
                 });
