@@ -4,7 +4,7 @@ using Creekdream.Domain.Repositories;
 using Creekdream.Mapping;
 using Creekdream.Orm.Dapper;
 using Creekdream.SimpleDemo.Books.Dto;
-using Creekdream.UnitOfWork;
+using Creekdream.Uow;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -39,10 +39,10 @@ namespace Creekdream.SimpleDemo.Books
             var totalCount = await _bookRepository.CountAsync(predicate);
             // dapper 分页算法会导致误差
             var books = await _bookRepository.GetPaged(
-                predicate,
                 input.SkipCount / input.MaxResultCount,
                 input.MaxResultCount,
-                input.Sorting);
+                input.Sorting,
+                predicate);
 
             return new PagedResultOutput<GetBookOutput>()
             {

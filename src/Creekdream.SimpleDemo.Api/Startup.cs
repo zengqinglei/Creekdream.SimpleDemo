@@ -5,7 +5,6 @@ using Creekdream.Orm;
 using Creekdream.SimpleDemo.Api.Filters;
 using Creekdream.SimpleDemo.Api.Middlewares;
 using Creekdream.SimpleDemo.Mappers;
-using Creekdream.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -61,7 +60,6 @@ namespace Creekdream.SimpleDemo.Api
                 {
                     options.UseAutofac();
                     options.UseDapper();
-                    options.UseUnitOfWork();
                     options.AddSimpleDemoCore();
                     options.AddSimpleDemoApplication();
                 });
